@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 from arch import arch_model
 
-# ---------------------------------------------------------
 # CONFIGURATION & PARAMETERS
-# ---------------------------------------------------------
 TICKERS = {"S&P 500": "^GSPC", "FTSE MIB": "FTSEMIB.MI", "DAX 40": "^GDAXI"}
 START_DATE = "2021-01-01"
 END_DATE = "2025-12-31"
@@ -88,9 +86,7 @@ def visualize_results(series, name, metrics):
     plt.savefig(f"qqplot_{name.replace(' ', '_')}.png", dpi=300)
     plt.show()
 
-# ---------------------------------------------------------
 # MAIN EXECUTION BLOCK
-# ---------------------------------------------------------
 if __name__ == "__main__":
     returns = fetch_and_clean_data(TICKERS, START_DATE, END_DATE)
     
